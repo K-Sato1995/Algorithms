@@ -1,11 +1,21 @@
 # Overview
 
-I'm just practicing all the things I learnt from articles listed below.
-All the credit goes to the creaters of those articles.
+Here are some search and sort algorithms in Go, Ruby and Javascript. (It is still work in progress)
 
-# References
+I'm basically practicing all the things I learnt from articles listed below.
+All the credit goes to the authors of those articles.
+
+# Go References
 
 - [Let's Learn Algorithms](https://www.calhoun.io/lets-learn-algorithms/)
 - [GOLANG BASIC](http://www.golangprograms.com/)
 - [programming(guide)](https://programming.guide/go/binary-search.html)
 - [Algoful](http://algoful.com/)
+
+# Ruby References
+
+- [Search Algorithms in Ruby](https://medium.com/@limichelle21/search-algorithms-in-ruby-c3b8c9b70451)
+
+# References about the general idea
+
+- [turtorials point](https://www.tutorialspoint.com/data_structures_algorithms/)
