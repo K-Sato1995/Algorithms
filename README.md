@@ -15,6 +15,7 @@ All the credit goes to the authors of those articles.
 # Ruby References
 
 - [Search Algorithms in Ruby](https://medium.com/@limichelle21/search-algorithms-in-ruby-c3b8c9b70451)
+- [Sorting Algorithms in Ruby](https://medium.com/@limichelle21/read-it-learn-it-build-it-sorting-algorithms-in-ruby-ead04b04baa6)
 
 # References about the general idea
 
