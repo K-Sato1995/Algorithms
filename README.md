@@ -21,12 +21,20 @@ Run tests.
 $ npm run test
 ```
 
+- [Jest list of matchers](https://jestjs.io/docs/en/expect)
+
 ## Go
 
 Execute Go code.
 
 ```
 $ go run fileName.go
+```
+
+Run tests.
+
+```bash
+$ go test -v
 ```
 
 ## Ruby
@@ -36,6 +44,14 @@ Execute Ruby code.
 ```
 $ ruby file-name.rb
 ```
+
+Run tests.
+
+```bash
+$ ruby file_name_test.rb
+```
+
+- [Minitest list of matchers](http://www.mattsears.com/articles/2011/12/10/minitest-quick-reference/)
 
 # Go References
 
