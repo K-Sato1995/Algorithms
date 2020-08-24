@@ -5,7 +5,11 @@
   "repository": "git@github.com:K-Sato1995/Algorithms.git",
   "author": "Katsuki <Katsuki_Sato0130@icloud.com>",
   "license": "MIT",
+  "scripts": {
+    "test": "./node_modules/.bin/jest"
+  },
   "devDependencies": {
+    "jest": "^26.4.2",
     "typescript": "^4.0.2"
   }
 }

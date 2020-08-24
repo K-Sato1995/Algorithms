@@ -5,6 +5,38 @@ Here are some search and sort algorithms in Go, Ruby and Javascript. (It is stil
 I'm basically practicing all the things I learnt from articles listed below.
 All the credit goes to the authors of those articles.
 
+# How to execute code and run tests
+
+## TS
+
+Execute TS code.
+
+```bash
+$ node-ts fileName.ts
+```
+
+Run tests.
+
+```bash
+$ npm run test
+```
+
+## Go
+
+Execute Go code.
+
+```
+$ go run fileName.go
+```
+
+## Ruby
+
+Execute Ruby code.
+
+```
+$ ruby file-name.rb
+```
+
 # Go References
 
 - [Let's Learn Algorithms](https://www.calhoun.io/lets-learn-algorithms/)
