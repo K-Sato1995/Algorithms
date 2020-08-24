@@ -1,14 +1,14 @@
-import { linerSearch } from "./linerSearch";
+import { linearSearch } from "./linearSearch";
 
 describe("linerSearch", () => {
   it("returns true if the given value exists in the given list", () => {
     const data = [2, 3, 4, 5, 6, 7, 8, 9];
-    expect(linerSearch(data, 6)).toBeTruthy();
+    expect(linearSearch(data, 6)).toBeTruthy();
   });
 
   it("returns false if the given value dose not exist in the given list", () => {
     const data = [2, 3, 4, 5, 6, 7, 8, 9];
-    expect(linerSearch(data, 10)).toBeFalsy();
+    expect(linearSearch(data, 10)).toBeFalsy();
   });
 
   // xit("returns the position of the given value in the given list", () => {
