@@ -1,7 +1,6 @@
 {
   "name": "Algorithms",
   "version": "1.0.0",
-  "main": "index.js",
   "repository": "git@github.com:K-Sato1995/Algorithms.git",
   "author": "Katsuki <Katsuki_Sato0130@icloud.com>",
   "license": "MIT",
@@ -11,5 +10,9 @@
   "devDependencies": {
     "jest": "^26.4.2",
     "typescript": "^4.0.2"
+  },
+  "dependencies": {
+    "@types/jest": "^26.0.10",
+    "ts-jest": "^26.2.0"
   }
 }

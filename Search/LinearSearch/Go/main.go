@@ -4,7 +4,7 @@ import "fmt"
 
 func main() {
 	var list = []int{2, 4, 6, 8, 10}
-	fmt.Printf("The answer is %v\n", linearSearch(list, 5))
+	fmt.Printf("The answer is %v\n", linearSearch(list, 4))
 }
 
 func linearSearch(list []int, item int) bool {
