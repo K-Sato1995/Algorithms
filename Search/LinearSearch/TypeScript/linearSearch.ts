@@ -1,4 +1,4 @@
-const linearSearch = (list: number[], target: number) => {
+const linearSearch = (list: number[], target: number): boolean => {
   for (let i = 0; i < list.length; i++) {
     if (list[i] === target) return true;
   }
@@ -6,7 +6,7 @@ const linearSearch = (list: number[], target: number) => {
   return false;
 };
 
-const newLnearSearch = (list: number[], target: number) => {
+const newLnearSearch = (list: number[], target: number): number | Error => {
   for (let i = 0; i < list.length; i++) {
     if (list[i] === target) return i;
   }
