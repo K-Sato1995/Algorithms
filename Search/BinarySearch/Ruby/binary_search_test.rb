@@ -12,4 +12,12 @@ describe "Binary Search" do
   it "raises NoSuchValueError when the given value dose not exist in the list" do
     expect{ iterative_binary_search(TEST_DATA, 100) }.must_raise(NoSuchValueError)
   end
+
+  it "returns the position of the given value in the given list" do
+    expect(recursive_binary_search(TEST_DATA, 4)).must_equal(3)
+  end
+
+  it "raises NoSuchValueError when the given value dose not exist in the list" do
+    expect{ recursive_binary_search(TEST_DATA, 100) }.must_raise(NoSuchValueError)
+  end
 end

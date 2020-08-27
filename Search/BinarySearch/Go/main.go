@@ -37,3 +37,6 @@ func binarySearch(list []int, target int) (result int, count int) {
 	count++
 	return
 }
+
+func IterativeBinarySearch(sortedList []int, target int) {
+}
