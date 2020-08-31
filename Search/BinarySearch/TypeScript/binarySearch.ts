@@ -7,7 +7,7 @@ const iterativeBinarySearch = (
 
   while (low < high) {
     let mid = Math.floor((low + high) / 2);
-    console.log(`Low: ${low}, Mid: ${mid}, High: ${high}`);
+    // console.log(`Low: ${low}, Mid: ${mid}, High: ${high}`);
 
     if (sortedList[mid] === target) {
       // Return the value if the value in the middle is the same as the target value.
