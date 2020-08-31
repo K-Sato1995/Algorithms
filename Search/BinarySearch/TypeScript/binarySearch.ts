@@ -24,14 +24,6 @@ const iterativeBinarySearch = (
   throw "No such value";
 };
 
-// def recursive_binary_search(array, target, low, high)
-//   mid = (low + high) / 2
-//   raise NoSuchValueError if high < low
-//   return recursive_binary_search(array, target, low, mid - 1) if (array[mid] > target)
-//   return recursive_binary_search(array, target, mid + 1, high) if (array[mid] < target)
-//   return mid if (array[mid] == target)
-// end
-
 const recursiveBinarySearch = (
   sortedList: number[],
   target: number,

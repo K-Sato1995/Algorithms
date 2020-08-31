@@ -15,7 +15,7 @@ func main() {
 
 func binarySearch(list []int, target int) (result int, count int) {
 	var middleIndex = len(list) / 2
-	fmt.Println(list)
+	// fmt.Println(list)
 	//=> [1 2 3 4 5 6 7 8 9 10]
 	//=> [7 8 9 10]
 	//=> [7 8]
@@ -36,7 +36,4 @@ func binarySearch(list []int, target int) (result int, count int) {
 	}
 	count++
 	return
-}
-
-func IterativeBinarySearch(sortedList []int, target int) {
 }
