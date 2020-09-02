@@ -16,9 +16,11 @@ export const selectionSort = (list: number[]): number[] | Error => {
       }
       // console.log(`currentMin: ${currentMin}`);
 
-      var tmp = list[i];
-      list[i] = list[currentMin];
-      list[currentMin] = tmp;
+      if (i !== currentMin) {
+        var tmp = list[i];
+        list[i] = list[currentMin];
+        list[currentMin] = tmp;
+      }
     }
   }
 

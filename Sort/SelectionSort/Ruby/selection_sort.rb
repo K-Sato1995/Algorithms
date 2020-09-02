@@ -4,21 +4,27 @@ class ArrayIsEmptyError < StandardError
   end
 end
 
-# def selection_sort(list)
-#   raise ArrayIsEmptyError if list.empty?
-#   i = 0
-#   while i < list.length
-#     currentMin = i
-#     j = 0
+def selection_sort(list)
+  raise ArrayIsEmptyError if list.empty?
 
-#     while j < list.length 
+  i = 0
+  while i < list.length
+    currentMin = i
+    j = 0
 
-#       j += 1
-#     end
+    while j < list.length 
+      currentMin = j if list[currentMin] < list[j]
+      
+      list[currentMin], list[i] = list[i], list[currentMin] unless currentMin === i
+      j += 1
+    end
 
-#     i+=1
-#   end
-# end
+    i+=1
+  end
+
+  list
+end
+
 # export const selectionSort = (list: number[]): number[] | Error => {
 #   if (list.length === 0) throw "The given array is empty";
 
