@@ -2,33 +2,30 @@
 export const selectionSort = (list: number[]): number[] | Error => {
   if (list.length === 0) throw "The given array is empty";
 
+  const listSize = list.length;
   let currentMin: number;
 
-  for (let i = 0; i < list.length; i++) {
+  for (let i = 0; i < listSize; i++) {
     currentMin = i;
     // console.log(`-----------currentMin: ${currentMin}--------------------`);
 
     //check the rest of the array to see if anything is smaller
-    for (let j = 0; j < list.length; j++) {
+    for (let j = i + 1; j < listSize; j++) {
       // console.log(`list: ${list}`);
-      if (list[currentMin] < list[j]) {
+      if (list[j] < list[currentMin]) {
         currentMin = j;
       }
-      // console.log(`currentMin: ${currentMin}`);
-
-      if (i !== currentMin) {
-        var tmp = list[i];
-        list[i] = list[currentMin];
-        list[currentMin] = tmp;
-      }
     }
+    // console.log(`currentMin: ${currentMin}`);
+    var tmp = list[i];
+    list[i] = list[currentMin];
+    list[currentMin] = tmp;
   }
 
   return list;
 };
 
 selectionSort([3, 2, 1]);
-
 /*
 selectionSort([3, 2, 1]);
 -----------currentMin: 0--------------------
