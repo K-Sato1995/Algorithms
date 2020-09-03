@@ -9,7 +9,7 @@ export const selectionSort = (list: number[]): number[] | Error => {
     currentMin = i;
     // console.log(`-----------currentMin: ${currentMin}--------------------`);
 
-    //check the rest of the array to see if anything is smaller
+    // Find the index of the smallest value in the rest of the array and set it as the currentMin.
     for (let j = i + 1; j < listSize; j++) {
       // console.log(`list: ${list}`);
       if (list[j] < list[currentMin]) {
@@ -27,27 +27,14 @@ export const selectionSort = (list: number[]): number[] | Error => {
 
 selectionSort([3, 2, 1]);
 /*
-selectionSort([3, 2, 1]);
 -----------currentMin: 0--------------------
 list: 3,2,1
-currentMin: 0
 list: 3,2,1
-currentMin: 0
-list: 3,2,1
-currentMin: 0
+currentMin: 2
 -----------currentMin: 1--------------------
-list: 3,2,1
-currentMin: 0
-list: 2,3,1
-currentMin: 1
-list: 2,3,1
+list: 1,2,3
 currentMin: 1
 -----------currentMin: 2--------------------
-list: 2,3,1
-currentMin: 0
-list: 1,3,2
-currentMin: 1
-list: 1,2,3
 currentMin: 2
 */
 
