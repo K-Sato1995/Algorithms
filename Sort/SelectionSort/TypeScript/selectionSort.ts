@@ -7,36 +7,28 @@ export const selectionSort = (list: number[]): number[] | Error => {
 
   for (let i = 0; i < listSize; i++) {
     currentMin = i;
-    // console.log(`-----------currentMin: ${currentMin}--------------------`);
-
-    // Find the index of the smallest value in the rest of the array and set it as the currentMin.
+    /* 
+    Find the index of the smallest value in the rest of the array and set it as the currentMin.
+    */
     for (let j = i + 1; j < listSize; j++) {
-      // console.log(`list: ${list}`);
       if (list[j] < list[currentMin]) {
         currentMin = j;
       }
     }
-    // console.log(`currentMin: ${currentMin}`);
-    var tmp = list[i];
-    list[i] = list[currentMin];
-    list[currentMin] = tmp;
+
+    /*
+    Swap the value at i with the smallest value in the rest of the array.
+    Skip this part if the value at i is the smallest value in the array.
+    */
+    if (i != currentMin) {
+      var tmp = list[i];
+      list[i] = list[currentMin];
+      list[currentMin] = tmp;
+    }
   }
 
   return list;
 };
-
-selectionSort([3, 2, 1]);
-/*
------------currentMin: 0--------------------
-list: 3,2,1
-list: 3,2,1
-currentMin: 2
------------currentMin: 1--------------------
-list: 1,2,3
-currentMin: 1
------------currentMin: 2--------------------
-currentMin: 2
-*/
 
 /*
 How to swap values in an array in JS/TS
