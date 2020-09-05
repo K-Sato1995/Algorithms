@@ -10,43 +10,15 @@ def selection_sort(list)
   i = 0
   while i < list.length
     currentMin = i
-    j = 0
+    j = i + 1
 
-    while j < list.length 
-      currentMin = j if list[currentMin] < list[j]
-      
-      list[currentMin], list[i] = list[i], list[currentMin] unless currentMin === i
+    while j < list.length  
+      currentMin = j if list[j] < list[currentMin]      
       j += 1
     end
-
+    list[currentMin], list[i] = list[i], list[currentMin] unless currentMin === i
     i+=1
   end
 
   list
 end
-
-# export const selectionSort = (list: number[]): number[] | Error => {
-#   if (list.length === 0) throw "The given array is empty";
-
-#   let currentMin: number;
-
-#   for (let i = 0; i < list.length; i++) {
-#     currentMin = i;
-#     // console.log(`-----------currentMin: ${currentMin}--------------------`);
-
-#     //check the rest of the array to see if anything is smaller
-#     for (let j = 0; j < list.length; j++) {
-#       // console.log(`list: ${list}`);
-#       if (list[currentMin] < list[j]) {
-#         currentMin = j;
-#       }
-#       // console.log(`currentMin: ${currentMin}`);
-
-#       var tmp = list[i];
-#       list[i] = list[currentMin];
-#       list[currentMin] = tmp;
-#     }
-#   }
-
-#   return list;
-# };
