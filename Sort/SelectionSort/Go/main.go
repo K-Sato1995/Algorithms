@@ -4,11 +4,12 @@ import "fmt"
 
 func main() {
 	var list = []int{3, 5, 1, 2, 8, 6, 4}
-	selectionSort(list)
+	SelectionSort(list)
 	fmt.Println(list)
 }
 
-func selectionSort(list []int) []int {
+// SelectionSort sorts the given array in the right order.
+func SelectionSort(list []int) []int {
 	var listLen = len(list)
 
 	// Loop1
