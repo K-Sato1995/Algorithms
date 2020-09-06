@@ -6,18 +6,14 @@ end
 
 def selection_sort(list)
   raise ArrayIsEmptyError if list.empty?
-
-  i = 0
-  while i < list.length
+  listLength = list.size - 1
+  
+  listLength.times do |i|
     currentMin = i
-    j = i + 1
+    
+    (i + 1).upto(listLength) { |j| currentMin = j if list[j] < list[currentMin] }
 
-    while j < list.length  
-      currentMin = j if list[j] < list[currentMin]      
-      j += 1
-    end
     list[currentMin], list[i] = list[i], list[currentMin] unless currentMin === i
-    i+=1
   end
 
   list
