@@ -1,6 +1,12 @@
+class ArrayIsEmptyError < StandardError
+  def initialize(msg="The array is empty")
+    super
+  end
+end
+
 def bubble_sort(list)
   len = list.length
-  return list if len <= 1
+  raise ArrayIsEmptyError if len == 0
 
   swap = true # Indicator of if the array is sorted.
 
