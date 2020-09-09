@@ -3,13 +3,17 @@ const insertionSort = (list: number[]) => {
   if (length === 0) throw "The given array is empty";
 
   for (let i = 0; i < length; i++) {
+    // Set the first element in the unsorted array as key.
     let key = list[i];
+
+    // The index of the last element of the sorted array
     let j = i - 1;
 
     while (j >= 0 && list[j] > key) {
       list[j + 1] = list[j];
-      j = j - 1;
+      j--
     }
+
     list[j + 1] = key;
   }
 
