@@ -1,3 +1,4 @@
+// https://medium.com/javascript-algorithms/javascript-algorithms-insertion-sort-59b6b655373c
 const insertionSort = (list: number[]) => {
   let length = list.length;
   if (length === 0) throw "The given array is empty";
@@ -11,7 +12,7 @@ const insertionSort = (list: number[]) => {
 
     while (j >= 0 && list[j] > key) {
       list[j + 1] = list[j];
-      j--
+      j--;
     }
 
     list[j + 1] = key;
