@@ -1,4 +1,4 @@
-// https://medium.com/javascript-algorithms/javascript-algorithms-insertion-sort-59b6b655373c
+// https://www.w3resource.com/javascript-exercises/searching-and-sorting-algorithm/searching-and-sorting-algorithm-exercise-4.php
 const insertionSort = (list: number[]) => {
   let length = list.length;
   if (length === 0) throw "The given array is empty";
