@@ -1,7 +1,7 @@
 require 'minitest/autorun'
 require_relative 'merge_sort'
 
-
+# test for the merge sort
 describe "merge_sort" do
   TEST_DATA = [8, 4, 3, 1, 2, 6, 5, 7];
 
