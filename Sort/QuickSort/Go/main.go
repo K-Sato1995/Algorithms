@@ -1,6 +1,5 @@
 package main
 
-// Quick sort
 import "fmt"
 
 func main() {
