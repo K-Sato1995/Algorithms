@@ -17,7 +17,7 @@ function romanToInt(s: string): number {
 
     for(let i = 0; i < romanArr.length; i++){
         if(romanIntTable[romanArr[i]] < romanIntTable[romanArr[i + 1]] ){
-            result += romanIntTable[romanArr[i + 1]] - romanIntTable[romanArr[i]]
+            result = result - romanIntTable[romanArr[i]]
         } else {
             result += romanIntTable[romanArr[i]]
         }
