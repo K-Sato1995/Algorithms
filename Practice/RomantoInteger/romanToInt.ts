@@ -10,7 +10,7 @@ const romanIntTable: Record<string, number> = {
     "M": 1000
   };
   
-function romanToInt(s: string): number {
+export function romanToInt(s: string): number {
     // 文字列を配列にしてループ
     const romanArr = s.split('')
     let result = 0
