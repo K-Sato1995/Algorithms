@@ -11,6 +11,7 @@ const validateSameLetter = (s: string): boolean => {
     return true
 }
 
+// When u can't convert string into an array
 const validateSameLetterAsString = (s: string): boolean => {  
     const stLength = s.length
 

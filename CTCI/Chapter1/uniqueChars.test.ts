@@ -1,4 +1,4 @@
-import { validateSameLetter, validateSameLetterAsString } from "./question1"
+import { validateSameLetter, validateSameLetterAsString } from "./uniqueChars"
 
 describe('validateSameLetter', () => {
     it('returns true if the string consists of unique letters', () => {
