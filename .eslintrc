@@ -1,0 +1,19 @@
+{
+    "extends": [
+      "plugin:prettier/recommended",
+      "prettier/@typescript-eslint",
+      "eslint:recommended"
+    ],
+    "plugins": ["prettier", "@typescript-eslint"],  
+    "rules": {
+      "prettier/prettier": "error",
+      "@typescipt-eslint/interface-name-prefix": ["always"],
+      "no-underscore-dangle": "error"
+    },
+    "parserOptions": {
+      "ecmaVersion": 2017
+    },
+    "env": {
+        "es6": true
+    }
+  }
