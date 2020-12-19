@@ -11,5 +11,18 @@ const validateSameLetter = (s: string): boolean => {
     return true
 }
 
+const validateSameLetterAsString = (s: string): boolean => {  
+    const stLength = s.length
 
-export { validateSameLetter }
+    for(let i = 0; i < stLength; i++) {
+        for(let j = i + 1; j < stLength; j++) {
+            if(s.charAt(i) ===s.charAt(j)) return false
+        }
+    }
+    return true
+}
+
+
+
+
+export { validateSameLetter, validateSameLetterAsString }
