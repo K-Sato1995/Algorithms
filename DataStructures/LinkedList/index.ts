@@ -1,3 +1,6 @@
+// 配列とは異なり、連結リストには特定のIndexでアクセスはできない
+// リスト内のK番目の要素を見つけたい場合はheadからK個分の要素を走査する必要がある
+// O(n)
 class ListNode {
     value: number
     next?: ListNode
@@ -20,6 +23,17 @@ const countNode = (head: ListNode): number => {
     return count
 }
 
+// Delte a node at the given position
+const deleteNode = (head: ListNode, position: number) => {
+
+    let currentNode: ListNode = head
+
+    while(currentNode.next !== undefined){
+
+    }
+
+    return head
+}
 // const reverseList = (head: ListNode) => {
 //     let currentNode: ListNode = head
 //     let prevNode: ListNode | undefined
