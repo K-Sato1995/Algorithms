@@ -1,6 +1,6 @@
-class Box {
+class ListNode {
     value: number
-    next?: Box
+    next?: ListNode
 
     constructor(value: number) {
         this.value = value 
@@ -8,9 +8,9 @@ class Box {
 }
 
 // Returns the number of nodes in a linked list
-const countNode = (head: Box): number => {
+const countNode = (head: ListNode): number => {
     let count = 1
-    let currentNode: Box = head
+    let currentNode: ListNode = head
 
     while(currentNode.next !== undefined) {
         currentNode = currentNode.next
@@ -20,10 +20,10 @@ const countNode = (head: Box): number => {
     return count
 }
 
-const node1 = new Box(1)
-const node2 = new Box(2)
-const node3 = new Box(3)
-const node4 = new Box(4)
+const node1 = new ListNode(1)
+const node2 = new ListNode(2)
+const node3 = new ListNode(3)
+const node4 = new ListNode(4)
 
 node1.next = node2
 node2.next = node3
