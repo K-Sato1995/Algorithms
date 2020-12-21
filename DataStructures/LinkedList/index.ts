@@ -19,6 +19,18 @@ class ListNode {
 
         currentNode.next = newNode
     }
+
+    countNode() {
+        let currentNode: ListNode = this
+        let count = 0
+
+        while(currentNode.next !== undefined) {
+            currentNode = currentNode.next 
+            count++
+        }
+
+        return count
+    }
 }
 
 // Returns the number of nodes in a linked list
