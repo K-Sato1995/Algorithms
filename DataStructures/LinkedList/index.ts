@@ -8,6 +8,17 @@ class ListNode {
     constructor(value: number) {
         this.value = value 
     }
+
+    append(value: number) {
+        const newNode = new ListNode(value)
+        let currentNode: ListNode = this
+
+        while(currentNode.next !== undefined) {
+            currentNode = currentNode.next
+        }
+
+        currentNode.next = newNode
+    }
 }
 
 // Returns the number of nodes in a linked list
