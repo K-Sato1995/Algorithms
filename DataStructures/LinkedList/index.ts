@@ -36,8 +36,11 @@ const append = (head: ListNode, value: number): ListNode => {
 }
 
 // Add a node to the beggining of the list
-const push = (head: ListNode, value: number) => {
+const push = (head: ListNode, value: number): ListNode => {
+    let newNode = new ListNode(value)
+    newNode.next = head
 
+    return newNode
 }
 
 // Delte a node at the given position
