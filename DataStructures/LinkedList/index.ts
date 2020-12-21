@@ -8,29 +8,6 @@ class ListNode {
     constructor(value: number) {
         this.value = value 
     }
-
-    append(value: number) {
-        const newNode = new ListNode(value)
-        let currentNode: ListNode = this
-
-        while(currentNode.next !== undefined) {
-            currentNode = currentNode.next
-        }
-
-        currentNode.next = newNode
-    }
-
-    countNode() {
-        let currentNode: ListNode = this
-        let count = 0
-
-        while(currentNode.next !== undefined) {
-            currentNode = currentNode.next 
-            count++
-        }
-
-        return count
-    }
 }
 
 // Returns the number of nodes in a linked list
@@ -44,6 +21,23 @@ const countNode = (head: ListNode): number => {
     }
 
     return count
+}
+
+// Append a new node to the end of the list
+const append = (head: ListNode, value: number): ListNode => {
+    let newNode = new ListNode(value)
+    let currentNode = head 
+
+    while(currentNode.next !== undefined) {
+        currentNode = currentNode.next
+    }
+
+    return currentNode.next = newNode
+}
+
+// Add a node to the beggining of the list
+const push = (head: ListNode, value: number) => {
+
 }
 
 // Delte a node at the given position
@@ -81,3 +75,4 @@ node2.next = node3
 node3.next = node4
 
 // console.log(countNode(node1)) //=> 4
+export { ListNode, append, push, countNode }
