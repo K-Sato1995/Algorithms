@@ -1,15 +1,16 @@
-import { ListNode, LinkedList } from "./deleteDuplicateNode"
+import { LinkedList, ListNode } from "./linkedList"
+import { deleteDupNode } from "./deleteDuplicateNode"
 
-describe("DeleteDuplicateNode", () => {
+describe("deleteDupNode", () => {
     const linkedList = new LinkedList()
     linkedList.insertFirst(1)
     linkedList.insertFirst(2)
     linkedList.insertFirst(3)
-    linkedList.insertFirst(4)
+    linkedList.insertFirst(5)
+    linkedList.insertFirst(5)
 
-    it("replaces empty spaces with %20", () => {
-        linkedList.printList()
-        expect(1).toEqual("Mr%20John%20Smith")
+    it("removes the same values", () => {
+        deleteDupNode(linkedList.head as ListNode)
+        expect(linkedList.size).toEqual(4)
     })
-
 })

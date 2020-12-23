@@ -60,19 +60,20 @@ const deleteNode = (head: ListNode | undefined, key: number) => {
         }
     }
 }
-// const reverseList = (head: ListNode) => {
-//     let currentNode: ListNode = head
-//     let prevNode: ListNode | undefined
-//     let nextNode: ListNode | undefined
+
+const reverseList = (head: ListNode) => {
+    let currentNode: ListNode = head
+    let prevNode: ListNode | undefined
+    // let nextNode: ListNode | undefined
     
 
-//     while(currentNode.next !== undefined) {
-//         nextNode = currentNode.next
-//         currentNode.next = prevNode
-//         prevNode = currentNode
-//         currentNode = nextNode
-//     }
-// }
+    while(currentNode.next !== undefined) {
+        // nextNode = currentNode.next
+        currentNode.next = prevNode
+        prevNode = currentNode
+        // currentNode = nextNode
+    }
+}
 
 const node1 = new ListNode(1)
 const node2 = new ListNode(2)

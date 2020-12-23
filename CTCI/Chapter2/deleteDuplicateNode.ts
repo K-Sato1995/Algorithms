@@ -1,48 +1,23 @@
-class ListNode { 
-    value: number
-    next: ListNode | null
+import { LinkedList, ListNode } from './linkedList'
 
-    constructor(value: number, next:ListNode | null = null) {
-        this.value = value
-        this.next = next
-    }
-}
+// needs to be fixed
+const deleteDupNode = (head: ListNode) => {
+    let currentNode: ListNode | null = head
+    let previousNode: ListNode | null = null
+    let uniqueValues: number[] = []
 
-class LinkedList {
-    head: ListNode | null
-    size: number
-
-    constructor() {
-        this.head = null
-        this.size = 0
-    }
-    
-    insertFirst(value: number) {
-        this.head = new ListNode(value, this.head)
-        this.size++
-    }
-
-    removeAt(index: number) {
+    while(currentNode) {
+        if(uniqueValues.includes(currentNode.value)){
+            // probably something is wrong around here.
+            if(previousNode == null) return
+            previousNode.next = currentNode.next
+        } else {
+            uniqueValues.push(currentNode.value)
+            previousNode = currentNode
+        }
         
-    }
-
-    printList() {
-        let currentNode = this.head
-        let count = 1
-
-        if(currentNode == null) {
-            console.log("List is empty")
-            return
-        }
-
-        console.log(`size of the list: ${this.size}`)
-
-        while(currentNode) {
-            console.log(`Node:${count} | Value: ${currentNode.value}`)
-            currentNode = currentNode.next
-            count++
-        }
+        currentNode = currentNode.next
     }
 }
 
-export { LinkedList, ListNode }
+export { deleteDupNode }
