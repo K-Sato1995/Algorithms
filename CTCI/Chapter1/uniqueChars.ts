@@ -23,7 +23,4 @@ const validateSameLetterAsString = (s: string): boolean => {
     return true
 }
 
-
-
-
 export { validateSameLetter, validateSameLetterAsString }
