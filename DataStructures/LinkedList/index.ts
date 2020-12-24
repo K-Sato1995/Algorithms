@@ -61,18 +61,31 @@ const deleteNode = (head: ListNode | undefined, key: number) => {
     }
 }
 
+// Reversing a Linked List: Easy as 1, 2, 3
+// https://medium.com/outco/reversing-a-linked-list-easy-as-1-2-3-560fbffe2088
+// we just need two variables, let’s call them previous, current. And all we’re doing is taking current.next (which is represented by the arrow) and setting it equal to previous.
 const reverseList = (head: ListNode) => {
-    let currentNode: ListNode = head
+    // a -> b -> c -> d 
+    // d -> c -> b -> a
+    let currentNode: ListNode | undefined = head
     let prevNode: ListNode | undefined
-    // let nextNode: ListNode | undefined
+    let following: ListNode | undefined = head
     
 
-    while(currentNode.next !== undefined) {
-        // nextNode = currentNode.next
+    // 最後のnodeがnull(undefined)に到達するまで回す
+    while(currentNode !== undefined) {
+        // 現在のNodeが元々指していた物を一時的に保持する
+        following = currentNode.next
+        // 現在のNodeが次に指すべき物をここで設置する
+        // (a -> bならReverseした際にb -> aにする)
         currentNode.next = prevNode
+        // 次のNodeに移動する為にPrevにCurrentNodeをセットする
         prevNode = currentNode
-        // currentNode = nextNode
+        // 次のNodeに移動する為にCurrentNodeにFollowingをセットする
+        currentNode = following
     }
+
+    return prevNode
 }
 
 const node1 = new ListNode(1)
@@ -85,4 +98,4 @@ node2.next = node3
 node3.next = node4
 
 // console.log(countNode(node1)) //=> 4
-export { ListNode, append, push, countNode, deleteNode }
+export { ListNode, append, push, countNode, deleteNode, reverseList }
