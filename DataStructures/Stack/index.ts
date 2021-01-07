@@ -6,27 +6,27 @@
 // Stack
 // https://www.geeksforgeeks.org/implementation-stack-javascript/
 class Stack {
-    items: number[]
+  items: number[]
 
-    constructor(){
-        this.items = []
-    }
+  constructor() {
+    this.items = []
+  }
 
-    push(value: number){
-        this.items.push(value)
-    }
+  push(value: number) {
+    this.items.push(value)
+  }
 
-    pop(){
-        return this.items.pop()
-    }
+  pop() {
+    return this.items.pop()
+  }
 
-    //Peek() : returns the top most elements in the stack, but doesn’t delete it.
-    peek(){
-        const lengh = this.items.length
-        return this.items[lengh - 1]
-    }
+  //Peek() : returns the top most elements in the stack, but doesn’t delete it.
+  peek() {
+    const lengh = this.items.length
+    return this.items[lengh - 1]
+  }
 
-    isEmpty(){
-        return this.items.length === 0
-    }
+  isEmpty() {
+    return this.items.length === 0
+  }
 }

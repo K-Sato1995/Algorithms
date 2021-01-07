@@ -1,48 +1,48 @@
 const iterativeBinarySearch = (
   sortedList: number[],
-  target: number
+  target: number,
 ): number | Error => {
-  let low = 0;
-  let high = sortedList.length - 1;
+  let low = 0
+  let high = sortedList.length - 1
 
   while (low < high) {
-    let mid = Math.floor((low + high) / 2);
+    const mid = Math.floor((low + high) / 2)
     // console.log(`Low: ${low}, Mid: ${mid}, High: ${high}`);
 
     if (sortedList[mid] === target) {
       // Return the value if the value in the middle is the same as the target value.
-      return mid;
+      return mid
     } else if (sortedList[mid] < target) {
       // Set low as (mid + 1) if the value in the middle is smaller that the target value.
-      low = mid + 1;
+      low = mid + 1
     } else {
       // Set high as mid if the value in the middle is bigger than the target value.
-      high = mid;
+      high = mid
     }
   }
 
-  throw "No such value";
-};
+  throw 'No such value'
+}
 
 const recursiveBinarySearch = (
   sortedList: number[],
   target: number,
   low: number,
-  high: number
+  high: number,
 ): number | Error => {
-  const mid = Math.floor((low + high) / 2);
+  const mid = Math.floor((low + high) / 2)
 
-  if (sortedList[mid] === target) return mid;
-  if (high < low) throw "No such value";
+  if (sortedList[mid] === target) return mid
+  if (high < low) throw 'No such value'
 
   if (sortedList[mid] < target) {
-    return recursiveBinarySearch(sortedList, target, mid + 1, high);
+    return recursiveBinarySearch(sortedList, target, mid + 1, high)
   } else {
-    return recursiveBinarySearch(sortedList, target, low, mid - 1);
+    return recursiveBinarySearch(sortedList, target, low, mid - 1)
   }
-};
+}
 
-export { iterativeBinarySearch, recursiveBinarySearch };
+export { iterativeBinarySearch, recursiveBinarySearch }
 
 /* 
 console.log(iterativeBinarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9], 6));

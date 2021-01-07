@@ -1,13 +1,13 @@
 // https://adrianmejia.com/data-structures-for-beginners-trees-binary-search-tree-tutorial/
 
 class TreeNode {
-    value: number | null
-    descendents: TreeNode[]
+  value: number | null
+  descendents: TreeNode[]
 
-    constructor(value: number) {
-        this.value = value
-        this.descendents = []
-    }
+  constructor(value: number) {
+    this.value = value
+    this.descendents = []
+  }
 }
 
 const node1 = new TreeNode(1)
@@ -19,7 +19,7 @@ const node5 = new TreeNode(5)
 node1.descendents.push(node2)
 node2.descendents.push(node3, node4, node5)
 // This is what it looks like now
-//      node1 
+//      node1
 //        ↓
 //      node2
 //  ↙︎　　　↓     ↘︎
@@ -47,5 +47,4 @@ node2.descendents.push(node3, node4, node5)
 //         ]
 //       }
 //     ]
-//   } 
-
+//   }

@@ -1,10 +1,7 @@
 const isPalindrome = (str: string): boolean => {
-    const trimedString = str.replace(/\s/g, '')
+  const trimedString = str.replace(/\s/g, '')
 
-
-
-    return true
+  return true
 }
-
 
 export { isPalindrome }

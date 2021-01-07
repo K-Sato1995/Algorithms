@@ -1,5 +1,5 @@
 const goalTable = {
-    "G": "G",
-    "()": "o",
-    "(al)": "al"
+  G: 'G',
+  '()': 'o',
+  '(al)': 'al',
 }
