@@ -1,4 +1,4 @@
-import { ListNode, countNode, append, push } from './index'
+import { ListNode, countNode, append, push } from '../index'
 
 describe('countNode', () => {
   const node1 = new ListNode(1)
