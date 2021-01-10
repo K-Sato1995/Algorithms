@@ -1,6 +1,6 @@
 import { LinkedList, ListNode } from './linkedList'
 
-// needs to be fixed
+// TODO: needs to be fixed
 const deleteDupNode = (head: ListNode) => {
   let currentNode: ListNode | null = head
   let previousNode: ListNode | null = null
