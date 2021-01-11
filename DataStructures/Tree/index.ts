@@ -10,22 +10,22 @@ class TreeNode {
   }
 }
 
-const node1 = new TreeNode(1)
-const node2 = new TreeNode(2)
-const node3 = new TreeNode(3)
-const node4 = new TreeNode(4)
-const node5 = new TreeNode(5)
+const treeNode1 = new TreeNode(1)
+const treeNode2 = new TreeNode(2)
+const treeNode3 = new TreeNode(3)
+const treeNode4 = new TreeNode(4)
+const treeNode5 = new TreeNode(5)
 
-node1.descendents.push(node2)
-node2.descendents.push(node3, node4, node5)
+treeNode1.descendents.push(treeNode2)
+treeNode2.descendents.push(treeNode3, treeNode4, treeNode5)
 // This is what it looks like now
-//      node1
+//      treeNode1
 //        ↓
-//      node2
+//      treeNode2
 //  ↙︎　　　↓     ↘︎
-// node3 node4 node5
+// treeNode3 treeNode4 treeNode5
 
-// console.log(node1)
+// console.log(treeNode1)
 // =>
 // TreeNode: {
 //     "value": 1,
