@@ -75,9 +75,38 @@ class BinarySearchTree {
   }
 }
 
+const preorder = (root: BSTNode | null) => {
+  if (!root) {
+    return 'The tree is empty'
+  } else {
+    console.log(root.value)
+    preorder(root.left)
+    preorder(root.right)
+  }
+}
+
+const inorder = (root: BSTNode | null) => {
+  if (!root) {
+    return 'The tree is empty'
+  } else {
+    inorder(root.left)
+    console.log(root.value)
+    inorder(root.right)
+  }
+}
+
+const postorder = (root: BSTNode | null) => {
+  if (!root) {
+    return 'The tree is empty'
+  } else {
+    postorder(root.left)
+    postorder(root.right)
+    console.log(root.value)
+  }
+}
+
 const tree = new BinarySearchTree()
 tree.add(10)
-tree.add(4)
 tree.add(4)
 tree.add(12)
 tree.add(2)
@@ -108,3 +137,48 @@ console.log(tree)
 console.log(tree.find(4)) //=> true
 console.log(tree.find(12)) //=> true
 console.log(tree.find(3)) //=> false
+
+tree.add(3)
+tree.add(13)
+tree.add(14)
+console.log('-------Preorder-----------')
+preorder(tree.root)
+console.log('-------------------------')
+/*
+preorder
+10
+4
+2
+3
+12
+13
+14
+*/
+
+console.log('-------Inorder-----------')
+inorder(tree.root)
+console.log('-------------------------')
+/*
+inorder
+2
+3
+4
+10
+12
+13
+14
+*/
+
+console.log('-------Postorder-----------')
+postorder(tree.root)
+console.log('-------------------------')
+
+/*
+3
+2
+4
+14
+13
+12
+10
+*/
