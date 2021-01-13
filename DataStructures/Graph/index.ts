@@ -71,6 +71,35 @@ class Graph {
     */
     delete this.nodes[node]
   }
+
+  depthFirstSearch(firstNode: number): number[] {
+    // 全てのnodeをresultに保管して、最後に返す
+    const result = []
+    const stack = [firstNode]
+    // アクセスしたnodeはこのHashMapに入れておく
+    const visited: { [key: number]: boolean } = {}
+
+    visited[firstNode] = true
+
+    let currentNode
+
+    while (stack.length) {
+      currentNode = stack.pop() as number
+      // nodeを1つずつresultに保管していく
+      result.push(currentNode)
+
+      // depthで探索するので、現在のnodeに結びつくnodeを全て探索する
+      this.nodes[currentNode].forEach((adjacentNode: number) => {
+        // 既にvisitedに登録されていない場合
+        if (!visited[adjacentNode]) {
+          visited[adjacentNode] = true
+          stack.push(adjacentNode)
+        }
+      })
+    }
+
+    return result
+  }
 }
 
 const graph = new Graph()
@@ -83,6 +112,8 @@ graph.addEdge(1, 2)
 graph.addEdge(2, 3)
 
 console.log(graph)
+
+console.log(graph.depthFirstSearch(1))
 
 /*
 Graph { 
