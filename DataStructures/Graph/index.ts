@@ -100,6 +100,33 @@ class Graph {
 
     return result
   }
+
+  breadthFirstSearch(firstNode: number): number[] {
+    // 全てのnodeをresultに保管して、最後に返す
+    const result = []
+    const queue = [firstNode]
+
+    // アクセスしたnodeはこのHashMapに入れておく
+    const visited: { [key: number]: boolean } = {}
+
+    visited[firstNode] = true
+
+    let currentNode
+
+    while (queue.length) {
+      currentNode = queue.shift() as number
+      // nodeを1つずつresultに保管していく
+      result.push(currentNode)
+      this.nodes[currentNode].forEach((adjacentNode: number) => {
+        if (!visited[adjacentNode]) {
+          visited[adjacentNode] = true
+          queue.push(adjacentNode)
+        }
+      })
+    }
+
+    return result
+  }
 }
 
 const graph = new Graph()
@@ -107,24 +134,46 @@ const graph = new Graph()
 graph.addNode(1)
 graph.addNode(2)
 graph.addNode(3)
+graph.addNode(4)
+graph.addNode(5)
+graph.addNode(6)
 
 graph.addEdge(1, 2)
 graph.addEdge(2, 3)
+graph.addEdge(2, 5)
+graph.addEdge(3, 4)
+graph.addEdge(5, 6)
 
 console.log(graph)
 
-console.log(graph.depthFirstSearch(1))
-
 /*
-Graph { 
-    nodes: { 
-        '1': [ 2 ], 
-        '2': [ 1, 3 ], 
-        '3': [ 2 ] } 
-    }
+Graph {
+  nodes: {
+    '1': [ 2 ],
+    '2': [ 1, 3, 5 ],
+    '3': [ 2, 4 ],
+    '4': [ 3 ],
+    '5': [ 2, 6 ],
+    '6': [ 5 ]
+  }
 }
 */
 
+/*
+  上記は下記のようなグラフを表している
+  1 
+  |
+  2
+ / \
+3   5
+|   |
+4   6
+*/
+
+console.log(`DepthFirstSearch: ${graph.depthFirstSearch(1)}`)
+//=> [ 1, 2, 5, 6, 3, 4 ]
+console.log(`BreadthFirstSearch: ${graph.breadthFirstSearch(1)}`)
+//=> [ 1, 2, 3, 5, 4, 6 ]
 /*
 Adjacency matrix graph ts implementation
 https://github.com/CraigHarley/SimpleGraphJS/blob/master/Graph.ts
