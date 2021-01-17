@@ -172,6 +172,7 @@ Graph {
 
 console.log(`DepthFirstSearch: ${graph.depthFirstSearch(1)}`)
 //=> [ 1, 2, 5, 6, 3, 4 ]
+
 console.log(`BreadthFirstSearch: ${graph.breadthFirstSearch(1)}`)
 //=> [ 1, 2, 3, 5, 4, 6 ]
 /*
