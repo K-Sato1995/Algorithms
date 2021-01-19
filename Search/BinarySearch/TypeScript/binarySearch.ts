@@ -6,7 +6,7 @@ const iterativeBinarySearch = (
   let low = 0
   let high = sortedList.length - 1
 
-  while (low < high) {
+  while (low <= high) {
     const mid = Math.floor((low + high) / 2)
     // console.log(`Low: ${low}, Mid: ${mid}, High: ${high}`);
 
@@ -18,7 +18,7 @@ const iterativeBinarySearch = (
       low = mid + 1
     } else {
       // Set high as mid if the value in the middle is bigger than the target value.
-      high = mid
+      high = mid - 1
     }
   }
 
