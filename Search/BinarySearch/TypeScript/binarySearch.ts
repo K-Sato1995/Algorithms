@@ -1,3 +1,4 @@
+// The given array must be sorted!
 const iterativeBinarySearch = (
   sortedList: number[],
   target: number,
