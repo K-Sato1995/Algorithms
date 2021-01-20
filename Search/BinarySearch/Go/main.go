@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+// Write up the recursive version
 func main() {
 	var sortedList = []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
 	result, count := binarySearch(sortedList, 7)
