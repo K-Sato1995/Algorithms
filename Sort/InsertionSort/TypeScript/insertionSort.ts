@@ -21,4 +21,25 @@ const insertionSort = (list: number[]) => {
   return list
 }
 
+// [2, 3, 5, 5, 6, 8, 9]
+export function newInsertionSort(array: number[]) {
+  for (let i = 0; i < array.length; i++) {
+    // 0の場合はsortedとする為
+    if (i === 0) continue
+
+    // iが前の値より小さい場合はswapを繰り返す
+    while (array[i] < array[i - 1]) {
+      swap(i, i - 1, array)
+      i--
+    }
+  }
+  return array
+}
+
+const swap = (i: number, j: number, arr: number[]) => {
+  const tmp = arr[j]
+  arr[j] = arr[i]
+  arr[i] = tmp
+}
+
 export { insertionSort }
