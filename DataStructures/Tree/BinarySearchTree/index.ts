@@ -51,6 +51,10 @@ class BinarySearchTree {
     }
   }
 
+  remove(value: number) {
+    /*　When you want to remove the root value,  Move the leftmost value of the right sub tree to the root.　*/
+  }
+
   find(value: number) {
     // if tree is not there yet, just returns false
     if (!this.root) return false
