@@ -1,3 +1,4 @@
+// Define Binary Tree
 class BinaryTreeNode {
   value: number
   right: BinaryTreeNode | null
