@@ -109,6 +109,19 @@ const postorder = (root: BSTNode | null) => {
   }
 }
 
+function invertBinaryTree(tree: BinaryTree | null) {
+  if (tree !== null) {
+    const tmp = tree.left
+    tree.left = tree.right
+    tree.right = tmp
+
+    invertBinaryTree(tree.left)
+    invertBinaryTree(tree.right)
+  }
+
+  return tree
+}
+
 const tree = new BinarySearchTree()
 tree.add(10)
 tree.add(4)
