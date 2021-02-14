@@ -11,7 +11,7 @@ class BinaryTreeNode {
   }
 }
 
-const findHeight = (node: TreeNode | null) => {
+const findHeight = (node: BinaryTreeNode | null): number => {
   if (node == null) return 0
 
   const lefth = findHeight(node.left)
