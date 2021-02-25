@@ -1,8 +1,8 @@
 // https://medium.com/javascript-in-plain-english/javascript-merge-sort-3205891ac060
-const mergeSort = (list: number[]) => {
+const mergeSort = (list: number[]): number[] => {
   const listLength = list.length
 
-  if (listLength <= 0) return 'The given array is empty!'
+  if (listLength <= 0) return []
 
   // you need to figure out the middle index to divide the array in half
   const middleIndex = Math.floor(listLength / 2)
