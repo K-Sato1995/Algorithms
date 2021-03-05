@@ -1,8 +1,8 @@
-const bubbleSort = (list: number[]) => {
+const bubbleSort = (list: number[]): number[] => {
   let swapped = true
   const length = list.length
 
-  if (list.length === 0) throw 'The given array is empty'
+  if (list.length === 0) return list
 
   while (swapped) {
     swapped = false
