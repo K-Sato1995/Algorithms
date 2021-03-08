@@ -9,9 +9,4 @@ describe('BubbleSort', () => {
   it('raises an error when the given array is empty', () => {
     expect(bubbleSort([])).toStrictEqual([])
   })
-  // it('raises an error when the given array is empty', () => {
-  //   expect(() => {
-  //     bubbleSort([])
-  //   }).toThrow('The given array is empty')
-  // })
 })
