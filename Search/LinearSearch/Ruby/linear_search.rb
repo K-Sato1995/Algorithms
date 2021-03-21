@@ -14,6 +14,7 @@ def liner_search(arr, target)
   end
   raise NoSuchValueError
 end
+
 # list = [2, 4, 6, 8, 10]
 # p liner_search(list, 6) #=> 2
 # p liner_search(list, 100) #=> "No such value in the array"
