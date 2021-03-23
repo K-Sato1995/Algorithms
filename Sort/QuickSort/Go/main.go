@@ -6,7 +6,6 @@ func main() {
 	var list = []int{3, 5, 1, 2, 8, 6, 4}
 
 	fmt.Println(quickSort(list))
-
 }
 
 func quickSort(list []int) []int {
@@ -56,9 +55,7 @@ func quickSort(list []int) []int {
 	//=> [5 6 8]
 	//=> [6 8]
 	//=> [1 2 3 4 5 6 8]
-
 	quickSort(list[:left])
 	quickSort(list[left+1:])
-
 	return list
 }
