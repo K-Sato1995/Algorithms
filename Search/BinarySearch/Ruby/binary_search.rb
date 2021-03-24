@@ -48,7 +48,6 @@ def recursive_binary_search2(array, target)
   middle = (low + high) / 2
   # Check if the value in the middle is equal to the target.
   return middle if target == array[middle]
-
    # Check if the target is smaller or bigger than the value in the middle.
   if array[middle] < target
     # If the value in the middle is smaller that the target,
