@@ -16,7 +16,6 @@ func SelectionSort(list []int) []int {
 	for i := 0; i < listLen; i++ {
 		// fmt.Println(i)   // 0 1 2 3 4 5 6
 		var minIndex = i // The index of the minimum value
-
 		// Loop2
 		for j := i; j < listLen; j++ {
 			if list[j] < list[minIndex] {
