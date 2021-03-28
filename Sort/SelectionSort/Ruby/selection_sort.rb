@@ -10,9 +10,7 @@ def selection_sort(list)
   
   listLength.times do |i|
     currentMin = i
-    
     (i + 1).upto(listLength) { |j| currentMin = j if list[j] < list[currentMin] }
-
     list[currentMin], list[i] = list[i], list[currentMin] unless currentMin === i
   end
 
