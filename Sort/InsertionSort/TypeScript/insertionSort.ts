@@ -1,5 +1,5 @@
 // https://www.w3resource.com/javascript-exercises/searching-and-sorting-algorithm/searching-and-sorting-algorithm-exercise-4.php
-const insertionSort = (list: number[]) => {
+const insertionSort = (list: number[]): number[] => {
   const length = list.length
   if (length === 0) throw 'The given array is empty'
 
@@ -22,7 +22,7 @@ const insertionSort = (list: number[]) => {
 }
 
 // [2, 3, 5, 5, 6, 8, 9]
-export function newInsertionSort(array: number[]) {
+export function newInsertionSort(array: number[]): number[] {
   for (let i = 0; i < array.length; i++) {
     // 0の場合はsortedとする為
     if (i === 0) continue
